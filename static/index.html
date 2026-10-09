@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Autopsy — AI Video Analysis</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <div class="logo">
+            VIDEO AUTOPSY
+        </div>
+
+        <h1>
+            Turn videos into<br>
+            <span>intelligent insights.</span>
+        </h1>
+
+        <p>
+            Upload a video and let AI transcribe, analyze,
+            summarize, and extract the information that matters.
+        </p>
+
+    </header>
+
+
+    <!-- UPLOAD -->
+    <section class="upload-box" id="uploadBox">
+
+        <div class="upload-icon">🎥</div>
+
+        <h2>Analyze a video</h2>
+
+        <p>
+            Drag and drop your video here, or choose a file.
+        </p>
+
+        <label for="videoInput" class="choose-btn">
+            Choose Video
+        </label>
+
+        <input
+            type="file"
+            id="videoInput"
+            accept="video/*"
+        >
+
+        <div id="fileName">
+            No video selected
+        </div>
+
+        <video
+            id="videoPreview"
+            controls
+            class="video-preview">
+        </video>
+
+        <button
+            id="uploadButton"
+            class="analyze-btn"
+            disabled>
+            Analyze Video
+        </button>
+
+    </section>
+
+
+    <!-- STATUS -->
+    <div id="status"></div>
+
+
+    <!-- RESULTS -->
+    <section id="results" class="results hidden">
+
+        <div class="results-header">
+
+            <div>
+                <div class="results-label">
+                    AI ANALYSIS
+                </div>
+
+                <h2 class="results-title">
+                    Analysis Results
+                </h2>
+            </div>
+
+            <div class="analysis-status">
+                ● Complete
+            </div>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+        <div class="summary-card">
+
+            <div class="card-icon">📋</div>
+
+            <div>
+                <h3>Summary</h3>
+
+                <p id="summary" class="summary-text"></p>
+            </div>
+
+        </div>
+
+
+        <!-- ANALYSIS GRID -->
+        <div class="analysis-grid">
+
+            <div class="info-card">
+
+                <div class="card-heading">
+                    <span class="card-icon">💡</span>
+
+                    <h3>Key Points</h3>
+                </div>
+
+                <ul id="keyPoints"></ul>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-heading">
+                    <span class="card-icon">😊</span>
+
+                    <h3>Sentiment</h3>
+                </div>
+
+                <div id="sentiment" class="sentiment">
+                    Unknown
+                </div>
+
+                <p
+                    id="sentimentExplanation"
+                    class="sentiment-explanation">
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-heading">
+                    <span class="card-icon">🏷️</span>
+
+                    <h3>Main Topics</h3>
+                </div>
+
+                <ul id="topics"></ul>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-heading">
+                    <span class="card-icon">✅</span>
+
+                    <h3>Action Items</h3>
+                </div>
+
+                <ul id="actions"></ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRANSCRIPT -->
+        <div class="transcript-card">
+
+            <div class="transcript-header">
+
+                <div class="card-heading">
+                    <span class="card-icon">📝</span>
+
+                    <h3>Transcript</h3>
+                </div>
+
+                <button
+                    id="copyTranscript"
+                    class="copy-btn">
+                    Copy Transcript
+                </button>
+
+            </div>
+
+            <div
+                id="transcript"
+                class="transcript">
+            </div>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+        <div class="result-actions">
+
+            <button
+                id="downloadAnalysis"
+                class="download-btn">
+                ↓ Download Analysis
+            </button>
+
+            <button
+                id="newAnalysisButton"
+                class="new-analysis-btn">
+                + Analyze Another Video
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <span>Video Autopsy</span>
+        · Powered by Whisper + AI
+    </footer>
+
+</div>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+fastapi[standard]
+uvicorn
+python-multipart
+openai
+python-dotenv
+pydantic
+ffmpeg-python
+opencv-python
+numpy
+pillow
