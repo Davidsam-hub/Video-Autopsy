@@ -4,7 +4,8 @@ python-multipart
 openai
 python-dotenv
 pydantic
+openai-whisper
 ffmpeg-python
-opencv-python
+opencv-python-headless
 numpy
 pillow
